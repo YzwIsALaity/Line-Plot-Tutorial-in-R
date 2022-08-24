@@ -18,7 +18,8 @@ The dataset we used for the tutorial includes cycle threshold values and numeric
 
 - `Biomarker`: this is a __numerical measurement of a biomarker__ (numerical).
 
-![](/Users/yongzhewang/Desktop/Dataset_Shape.jpeg)
+![](https://github.com/YzwIsALaity/Line-Plot-Tutorial-in-R/blob/3cb83a04056a112854923509fb147d4fb1c11c25/Dataset_Shape.jpeg)
+
 
 No matter what types of plots we want to create with `ggplots`, the package has a fundamental input function for the dataset before passing into different plots. That is `ggplot()` and this function requires to passing dataset and setting variables X-axis and/or Y-axis. It basically need to use the inner argument `aes()` and we often pass below arguments into `aes()`:
 
@@ -56,7 +57,7 @@ ggplot(Dt, aes(x = Ct, y = Biomarker, col = Virus)) +
         legend.title = element_text(colour = "black", size = 11, face = 'bold')) 
 ```
 
-![](/Users/yongzhewang/Desktop/Version 0.0.jpeg)
+![](https://github.com/YzwIsALaity/Line-Plot-Tutorial-in-R/blob/3cb83a04056a112854923509fb147d4fb1c11c25/Version%200.0.jpeg)
 
 In this plot, we can find that it is really hard to distinguish a trace of each virus so we can __split Version 0.0 into two figures based on `Virus` with the same layout__. This will require us to use a new function:
 
@@ -89,7 +90,7 @@ ggplot(Dt, aes(x = Ct, y = Biomarker)) +
         strip.background = element_blank())                         # remove the background of titles for figures
 ```
 
-![](/Users/yongzhewang/Desktop/Version 1.0.jpeg)
+![](https://github.com/YzwIsALaity/Line-Plot-Tutorial-in-R/blob/3cb83a04056a112854923509fb147d4fb1c11c25/Version%201.0.jpeg)
 
 The above example is just stratified pairs of `Ct`-`Biomarker` by types of `Virus` and for the next one, we can try to __stratify them with two variables__. __Namely, pairs of `Ct`-`Biomarker` will be stratified by types of `Virus` and levels of `Severity`.__ We will set up columns as `Virus` and rows as `Severity`.
 ```
@@ -116,7 +117,7 @@ ggplot(Dt, aes(x = Ct, y = Biomarker)) +
         strip.background = element_blank())                         # remove the background of titles for figures
 ```
 
-![](/Users/yongzhewang/Desktop/Version 2.0.jpeg)
+![](https://github.com/YzwIsALaity/Line-Plot-Tutorial-in-R/blob/3cb83a04056a112854923509fb147d4fb1c11c25/Version%202.0.jpeg)
 
 In this section, we have seen how we can use basic line plot to visualize the development of a numerical biomarker along with cycle threshold values of viruses. Obviously, the basic line plot does not provide useful information for two variables so one may think about using more generalized methods to show their relationship, that is, a __smooth curve__.
 
@@ -167,7 +168,7 @@ ggplot(Dt, aes(x = Ct, y = Biomarker, col = Severity, fill = Severity)) + # set 
         strip.text = element_text(size = 13, face = 'bold'))      # set up size of title for each figure with 13
 ```
 
-![](/Users/yongzhewang/Desktop/Version 3.0.jpeg)
+![](https://github.com/YzwIsALaity/Line-Plot-Tutorial-in-R/blob/3cb83a04056a112854923509fb147d4fb1c11c25/Version%203.0.jpeg)
 
 Eventually we get the fancy one! Probably, it will be better to include borders and background of titles in columns and rows.
 
@@ -227,7 +228,7 @@ p2 <-
 grid.arrange(p1, p2, nrow = 1)
 ```
 
-![](/Users/yongzhewang/Desktop/Density.jpeg)
+![](https://github.com/YzwIsALaity/Line-Plot-Tutorial-in-R/blob/3cb83a04056a112854923509fb147d4fb1c11c25/Density.jpeg)
 
 Beside these plots, there are other functions related to line-base plots in `ggplot2` package and users can refer to other line plots such as 
 
